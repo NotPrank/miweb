@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-pagina {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 80px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #ccc;
+}
+
+.header-pagina > .titulo-a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: blue;
+  margin-left: 20px;
+}
+
+.header-pagina > .titulo-b {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: red;
+  margin-left: 5px;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.titulo-b:hover {
+  transform: scale(1.1);
+}
+
+.header-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.header-navegacion > ul {
+  width: 90%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.header-navegacion > ul > li {
+  padding: 0 55px;
+  border-right: 1px solid #ccc;
+}
+
+.header-navegacion > ul > li > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+  position: relative;
+}
+
+.header-navegacion > ul > li > a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px; /* Altura de la línea */
+  bottom: 0;
+  left: 0;
+  background-color: orange; /* Color de la línea */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-navegacion > ul > li > a:hover::after {
+  width: 100%;
+  visibility: visible;
+}
+
+.banner-principal {
+  width: 100%;
+  height: 450px;
+  background-image: url("../imgs/principal.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-secundario {
+  margin-top: 30px;
+  width: 100%;
+  height: 70px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-secundario > .texto-banner {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.banner-especial {
+  margin-top: 30px;
+  width: 100%;
+  height: 70px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-especial > .texto-banner {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.banner-principal > .texto-banner {
+  width: 50%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  border-radius: 20px 20px 0 0;
+}
+
+.categorias-productos {
+  margin-top: 40px;
+}
+
+.categorias-productos > .contenedor-categorias {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.categorias-productos > .contenedor-categorias > .categoria {
+  height: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.categorias-productos > .contenedor-categorias > .categoria.cat1 {
+  background-image: url("../imgs/categoria1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.categorias-productos > .contenedor-categorias > .categoria.cat2 {
+  background-image: url("../imgs/categoria2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.categorias-productos > .contenedor-categorias > .categoria.cat3 {
+  background-image: url("../imgs/categoria3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.categorias-productos > .contenedor-categorias > .categoria.cat4 {
+  background-image: url("../imgs/galeria_01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.categorias-productos > .contenedor-categorias > .categoria > .texto-categoria {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  border: none;
+
+  right: 0px;
+  transform: rotate(90deg);
+
+  transition: all 0.3s ease-in;
+}
+
+.categorias-productos
+  > .contenedor-categorias
+  > .categoria:hover
+  > .texto-categoria {
+  transform: rotate(0deg);
+  right: 0;
+}
+
+.categorias-productos > .contenedor-categorias > .categoria:hover {
+  filter: contrast(1.2);
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+/* Sobreescritura de estilos de Bootstrap */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.btn {
+  margin-top: 5px !important;
+}
+
+.precio {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.card {
+  transition: all 0.3s ease-in;
+  border: none !important;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
